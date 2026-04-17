@@ -1,0 +1,39 @@
+# Sensitive configuration
+config/settings.yaml
+
+# Memory store data files
+memory_store/raw/
+memory_store/episodes/
+memory_store/knowledge/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Environment
+.env
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Node (for demo UI)
+node_modules/
+# Internal tools
+.aris/

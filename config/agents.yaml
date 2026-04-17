@@ -1,0 +1,36 @@
+# OpenClaw 多Agent配置
+# 三个Agent对应三个飞书机器人
+
+openclaw:
+  version: "2026.4"
+
+accounts:
+  collector:
+    app_id: "cli_xxx1"
+    bot_name: "记忆采集员"
+    workspace: agents/collector
+    description: "负责从飞书群聊、文档、日历采集原始数据，写入Raw层"
+
+  memory:
+    app_id: "cli_xxx2"
+    bot_name: "记忆中枢"
+    workspace: agents/memory
+    description: "负责将Raw层消息提炼为结构化Episode，并合并到Knowledge层"
+
+  assistant:
+    app_id: "cli_xxx3"
+    bot_name: "项目助理"
+    workspace: agents/assistant
+    description: "负责检索三层记忆，回答用户问题，主动推送待跟进议题"
+
+# 数据流向: Collector 写 → Memory 读写 → Assistant 只读检索
+data_flow:
+  collector:
+    write: [raw]
+    read: []
+  memory:
+    write: [episodes, knowledge]
+    read: [raw, episodes]
+  assistant:
+    write: []
+    read: [raw, episodes, knowledge]

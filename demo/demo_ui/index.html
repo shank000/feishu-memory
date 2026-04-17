@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飞书记忆引擎 - Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- 顶部标题栏 -->
+        <header class="header">
+            <h1>飞书企业级记忆引擎</h1>
+            <div class="status-bar">
+                <span id="mode-badge" class="badge">Demo Mode</span>
+                <span id="status-text">系统就绪</span>
+            </div>
+        </header>
+
+        <!-- 主内容区 -->
+        <div class="main-content">
+            <!-- 左侧: 模拟飞书群聊 -->
+            <div class="panel chat-panel">
+                <div class="panel-header">
+                    <h2>项目Alpha核心群</h2>
+                    <div class="panel-actions">
+                        <button id="btn-inject" class="btn btn-primary">注入消息</button>
+                        <button id="btn-collect" class="btn btn-secondary">触发采集</button>
+                    </div>
+                </div>
+                <div class="panel-body" id="chat-messages">
+                    <div class="system-msg">等待消息注入...</div>
+                </div>
+            </div>
+
+            <!-- 中间: 交互区 -->
+            <div class="panel interact-panel">
+                <div class="panel-header">
+                    <h2>智能问答</h2>
+                </div>
+                <div class="panel-body">
+                    <div class="chat-area" id="qa-area">
+                        <div class="system-msg">输入问题，体验记忆检索</div>
+                    </div>
+                    <div class="input-area">
+                        <input type="text" id="qa-input" placeholder="例如: 项目用了什么数据库？" />
+                        <button id="btn-query" class="btn btn-primary">提问</button>
+                    </div>
+                </div>
+
+                <!-- 快捷操作 -->
+                <div class="quick-actions">
+                    <h3>快捷操作</h3>
+                    <div class="action-buttons">
+                        <button class="btn btn-action" data-action="process-episodes">提取Episodes</button>
+                        <button class="btn btn-action" data-action="process-knowledge">合并Knowledge</button>
+                        <button class="btn btn-action" data-action="push">检查推送</button>
+                        <button class="btn btn-action" data-action="digest">生成日报</button>
+                        <button class="btn btn-action" data-action="timeline">决策时间线</button>
+                        <button class="btn btn-action" data-action="auto-run">一键完整流程</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧: 记忆层查看器 -->
+            <div class="panel memory-panel">
+                <div class="panel-header">
+                    <h2>记忆层</h2>
+                    <div class="tab-bar">
+                        <button class="tab active" data-layer="raw">L1 Raw</button>
+                        <button class="tab" data-layer="episodes">L2 Episodes</button>
+                        <button class="tab" data-layer="knowledge">L3 Knowledge</button>
+                    </div>
+                </div>
+                <div class="panel-body" id="memory-content">
+                    <div class="system-msg">选择层级查看记忆内容</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

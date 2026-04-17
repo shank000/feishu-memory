@@ -1,0 +1,24 @@
+# 飞书集成配置 (真实模式)
+feishu:
+  # 飞书应用凭据
+  app_id: ${FEISHU_APP_ID}
+  app_secret: ${FEISHU_APP_SECRET}
+
+  # 监听的群聊列表
+  monitored_chats:
+    - chat_id: "oc_xxx1"
+      name: "项目Alpha核心群"
+      type: "group"
+    - chat_id: "oc_xxx2"
+      name: "技术架构讨论群"
+      type: "group"
+
+  # Lark CLI 配置
+  lark_cli:
+    path: "lark-cli"  # 或完整路径
+    auth_type: "bot"  # bot | user
+
+  # 消息格式
+  message:
+    mention_trigger: true  # 被@时触发Assistant
+    max_length: 4096

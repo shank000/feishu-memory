@@ -1,0 +1,45 @@
+# 全局系统设置
+mode: demo  # demo | real
+
+# LLM 配置
+llm:
+  provider: openai  # openai | deepseek | local
+  model: gpt-4o-mini
+  api_key: YOUR_API_KEY_HERE
+  base_url: https://api.openai.com/v1
+  temperature: 0.3
+  max_tokens: 4096
+
+# 触发阈值
+triggers:
+  episode:
+    message_threshold: 20
+    meeting_end_marker: true
+  knowledge:
+    episode_threshold: 10
+    daily_schedule: "02:00"
+  digest:
+    daily_schedule: "18:00"
+    weekly_schedule: "monday_09:00"
+  push:
+    schedule: "10:00"
+    cooldown_hours: 24
+
+# 采集器配置
+collector:
+  heartbeat_minutes: 30
+  batch_size: 100
+
+# 检索配置
+retrieval:
+  top_k: 5
+  layer_weights:
+    knowledge: 1.0
+    episode: 0.7
+    raw: 0.4
+
+# 存储路径
+storage:
+  raw_dir: memory_store/raw
+  episodes_dir: memory_store/episodes
+  knowledge_dir: memory_store/knowledge

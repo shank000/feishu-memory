@@ -1,0 +1,64 @@
+[
+  {
+    "query": "项目用了什么数据库？",
+    "expected_answer_contains": ["MySQL"],
+    "expected_layers_hit": [3, 2],
+    "should_resolve_conflict": true,
+    "conflict_description": "L2可能还有PostgreSQL的旧Episode，L3应为MySQL"
+  },
+  {
+    "query": "认证方案是什么？",
+    "expected_answer_contains": ["JWT", "RS256"],
+    "expected_layers_hit": [3, 2],
+    "should_resolve_conflict": false
+  },
+  {
+    "query": "谁负责后端开发？",
+    "expected_answer_contains": ["李四"],
+    "expected_layers_hit": [3, 2],
+    "should_resolve_conflict": false
+  },
+  {
+    "query": "部署方案是什么？",
+    "expected_answer_contains": ["Docker Compose"],
+    "expected_layers_hit": [3, 2],
+    "should_resolve_conflict": false
+  },
+  {
+    "query": "监控方案定了没有？",
+    "expected_answer_contains": ["Prometheus", "Grafana"],
+    "expected_layers_hit": [3, 2],
+    "should_resolve_conflict": true,
+    "conflict_description": "L2可能有'待定'的旧Episode，L3应为'已定Prometheus'"
+  },
+  {
+    "query": "项目的技术架构是什么？",
+    "expected_answer_contains": ["单体架构", "Next.js", "Go"],
+    "expected_layers_hit": [3, 2],
+    "should_resolve_conflict": false
+  },
+  {
+    "query": "WebSocket相关的决定？",
+    "expected_answer_contains": ["WebSocket", "实时通知"],
+    "expected_layers_hit": [2, 3],
+    "should_resolve_conflict": false
+  },
+  {
+    "query": "测试方案是什么？",
+    "expected_answer_contains": ["Playwright", "testing"],
+    "expected_layers_hit": [3, 2],
+    "should_resolve_conflict": false
+  },
+  {
+    "query": "赵六负责什么？",
+    "expected_answer_contains": ["基础设施", "数据库"],
+    "expected_layers_hit": [3, 2],
+    "should_resolve_conflict": false
+  },
+  {
+    "query": "有哪些待办事项？",
+    "expected_answer_contains": ["评估", "方案"],
+    "expected_layers_hit": [3, 2],
+    "should_resolve_conflict": false
+  }
+]

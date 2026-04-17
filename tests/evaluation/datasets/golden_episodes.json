@@ -1,0 +1,148 @@
+[
+  {
+    "ep_id": "golden_ep_001",
+    "title": "采用单体架构",
+    "tags": ["决策"],
+    "operation": "ADD",
+    "source_keywords": ["单体架构", "Next.js", "Go"],
+    "expected_summary_contains": "前端Next.js + 后端Go"
+  },
+  {
+    "ep_id": "golden_ep_002",
+    "title": "团队分工确认",
+    "tags": ["待办"],
+    "operation": "ADD",
+    "source_keywords": ["分工", "负责"],
+    "expected_summary_contains": "李四后端，王五前端"
+  },
+  {
+    "ep_id": "golden_ep_003",
+    "title": "数据库选型为PostgreSQL",
+    "tags": ["决策"],
+    "operation": "ADD",
+    "source_keywords": ["PostgreSQL", "数据库"],
+    "expected_summary_contains": "PostgreSQL"
+  },
+  {
+    "ep_id": "golden_ep_004",
+    "title": "数据库改为MySQL",
+    "tags": ["决策"],
+    "operation": "UPDATE",
+    "supersedes": "golden_ep_003",
+    "source_keywords": ["MySQL", "改用"],
+    "expected_summary_contains": "MySQL"
+  },
+  {
+    "ep_id": "golden_ep_005",
+    "title": "认证方案JWT+RS256",
+    "tags": ["决策"],
+    "operation": "ADD",
+    "source_keywords": ["JWT", "认证", "RS256"],
+    "expected_summary_contains": "JWT"
+  },
+  {
+    "ep_id": "golden_ep_006",
+    "title": "API风格选择REST",
+    "tags": ["决策"],
+    "operation": "ADD",
+    "source_keywords": ["REST", "API", "gRPC"],
+    "expected_summary_contains": "REST"
+  },
+  {
+    "ep_id": "golden_ep_007",
+    "title": "实时通知用WebSocket",
+    "tags": ["决策"],
+    "operation": "ADD",
+    "source_keywords": ["WebSocket", "实时通知"],
+    "expected_summary_contains": "WebSocket"
+  },
+  {
+    "ep_id": "golden_ep_008",
+    "title": "赵六评估服务器资源需求",
+    "tags": ["待办"],
+    "operation": "ADD",
+    "source_keywords": ["资源评估", "赵六"],
+    "expected_summary_contains": "赵六"
+  },
+  {
+    "ep_id": "golden_ep_009",
+    "title": "部署方案Docker Compose",
+    "tags": ["决策"],
+    "operation": "ADD",
+    "source_keywords": ["Docker Compose", "部署"],
+    "expected_summary_contains": "Docker Compose"
+  },
+  {
+    "ep_id": "golden_ep_010",
+    "title": "后端目录按DDD分层",
+    "tags": ["决策"],
+    "operation": "ADD",
+    "source_keywords": ["DDD", "分层"],
+    "expected_summary_contains": "DDD"
+  },
+  {
+    "ep_id": "golden_ep_011",
+    "title": "监控方案待定",
+    "tags": ["疑问"],
+    "operation": "ADD",
+    "source_keywords": ["监控", "Prometheus", "Datadog"],
+    "expected_summary_contains": "监控"
+  },
+  {
+    "ep_id": "golden_ep_012",
+    "title": "监控方案确定为Prometheus",
+    "tags": ["决策"],
+    "operation": "UPDATE",
+    "supersedes": "golden_ep_011",
+    "source_keywords": ["Prometheus", "Grafana"],
+    "expected_summary_contains": "Prometheus"
+  },
+  {
+    "ep_id": "golden_ep_013",
+    "title": "WebSocket认证统一方案",
+    "tags": ["结论"],
+    "operation": "ADD",
+    "source_keywords": ["WebSocket", "认证", "统一"],
+    "expected_summary_contains": "JWT"
+  },
+  {
+    "ep_id": "golden_ep_014",
+    "title": "E2E测试框架Playwright",
+    "tags": ["决策"],
+    "operation": "ADD",
+    "source_keywords": ["Playwright", "测试"],
+    "expected_summary_contains": "Playwright"
+  },
+  {
+    "ep_id": "golden_ep_015",
+    "title": "前端选择Next.js App Router",
+    "tags": ["决策"],
+    "operation": "ADD",
+    "source_keywords": ["Next.js", "App Router"],
+    "expected_summary_contains": "Next.js"
+  },
+  {
+    "ep_id": "golden_ep_016",
+    "title": "数据库中途变更是最大教训",
+    "tags": ["结论"],
+    "operation": "ADD",
+    "source_keywords": ["教训", "数据库"],
+    "expected_summary_contains": "PostgreSQL"
+  },
+  {
+    "ep_id": "golden_ep_017",
+    "title": "Go代码风格规范待定",
+    "tags": ["疑问"],
+    "operation": "ADD",
+    "source_keywords": ["代码规范", "Go"],
+    "expected_summary_contains": "Go"
+  },
+  {
+    "ep_id": "golden_ep_018",
+    "title": "测试覆盖率达85%",
+    "tags": ["结论"],
+    "operation": "ADD",
+    "source_keywords": ["覆盖率", "85%"],
+    "expected_summary_contains": "85%"
+  }
+]
